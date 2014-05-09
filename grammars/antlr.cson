@@ -1,0 +1,60 @@
+'name': 'ANTLR'
+'scopeName': 'source.antlr'
+'fileTypes': [
+  'g'
+  'g4'
+]
+'patterns': [
+  {
+    'name': 'comment.block.antlr'
+    'begin': '/\\*'
+    'end': '\\*/'
+  }
+  {
+    'name': 'comment.line.double-slash.antlr'
+    'match': '(//).*$\\n?'
+  }
+  {
+    'name': 'keyword.command.antlr'
+    'match': '\\b(parser|lexer|grammar|fragment|options)\\b'
+  }
+  {
+    'name': 'keyword.control.antlr'
+    'match': '\\b(returns|throws|catch|finally)\\b'
+  }
+  {
+    'name': 'constant.character.escape.backslash.antlr'
+    'match': '\\\\.'
+  }
+  {
+    'name': 'keyword.operator.antlr'
+    'match': '(\\~|\\->|<|>|=|\\?|\\*|\\+|\\+=|\\|\\.\\.)'
+  }
+  {
+    'name': 'string.quoted.single.antl'
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.antlr'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.antlr'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.antlr'
+      }
+    ]
+  }
+  {
+    'begin': '^\\s*([a-zA-Z]\\w*)'
+    'beginCaptures':
+      '1':
+        'name': 'storage.type.antlr'
+    'end': '\:'
+    'endCaptures':
+      '0':
+        'name': 'keyword.operator.antlr'
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "language-antlr",
+  "version": "0.0.0",
+  "description": "ANTLR language support in Atom",
+  "repository": "https://github.com/dbrabera/language-antlr",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
